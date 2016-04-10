@@ -3,6 +3,30 @@ guid: f6762c61faded4902a172cb8b4f8c201
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Antenna
+    100002: flipper
+    100004: grillobj
+    100006: Handle
+    100008: knob4
+    100010: //RootNode
+    400000: Antenna
+    400002: flipper
+    400004: grillobj
+    400006: Handle
+    400008: knob4
+    400010: //RootNode
+    2300000: Antenna
+    2300002: flipper
+    2300004: grillobj
+    2300006: Handle
+    2300008: knob4
+    2300010: //RootNode
+    3300000: Antenna
+    3300002: flipper
+    3300004: grillobj
+    3300006: Handle
+    3300008: knob4
+    3300010: //RootNode
     4300000: Skin-edge
     4300002: Cylinder
     4300004: US_Army_mesh
@@ -11,6 +35,7 @@ ModelImporter:
     4300010: knob4
     4300012: Antenna
     4300014: flipper
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
