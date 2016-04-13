@@ -3,19 +3,22 @@ using System.Collections;
 
 public class spawnScript : MonoBehaviour {
 
+	//audio
+	public AudioClip jellyKidSound;
+	private AudioSource source;
+	public float vol;
+
 	//Core ingredients
 	public GameObject bread;
 	public GameObject jelly;
-	public GameObject peanutButter;
-
+	public GameObject peanut;
+	public GameObject butter;
 	//other ingredients
 	public GameObject ingredient_1;
 	public GameObject ingredient_2;
 	public GameObject ingredient_3;
 	public GameObject ingredient_4;
 	public GameObject ingredient_5;
-
-
 
 	//table
 	public GameObject table;
@@ -31,6 +34,9 @@ public class spawnScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//get audio source
+		source = GetComponent<AudioSource>();
 
 		//initialize the array and add the spawn points
 		array = new GameObject[4];
@@ -48,7 +54,8 @@ public class spawnScript : MonoBehaviour {
 
 	//spawn bread
 	public void spawnBread(){
-
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
 		//choose a random number to choose a random spawn position above the table
 		int randNum=Random.Range (0, 3);
 
@@ -60,6 +67,9 @@ public class spawnScript : MonoBehaviour {
 	}
 	//spawn jelly
 	public void spawnJelly(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (jelly) {
 			GameObject newJelly =Instantiate (jelly, array [randNum].transform.position, Quaternion.identity) as GameObject;
@@ -68,14 +78,24 @@ public class spawnScript : MonoBehaviour {
 	}
 	//spawnScript peanut butter
 	public void spawnPeanutButter(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
-		if (peanutButter) {
-			GameObject newPeanutButter =Instantiate (peanutButter, array [randNum].transform.position, Quaternion.identity) as GameObject;
-			newPeanutButter.transform.SetParent (table.transform);
+		if (peanut) {
+			GameObject newPeanut =Instantiate (peanut, array [randNum].transform.position, Quaternion.identity) as GameObject;
+			newPeanut.transform.SetParent (table.transform);
+		}
+		if (butter) {
+			GameObject newButter =Instantiate (butter, array [randNum].transform.position, Quaternion.identity) as GameObject;
+			newButter.transform.SetParent (table.transform);
 		}
 	}
 	//Spawn other ingredients
 	public void spawnIngredient1(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (ingredient_1) {
 			GameObject newIngredient =Instantiate (ingredient_1, array [randNum].transform.position, Quaternion.identity) as GameObject;
@@ -83,6 +103,9 @@ public class spawnScript : MonoBehaviour {
 		}
 	}
 	public void spawnIngredient2(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (ingredient_2) {
 			GameObject newIngredient =Instantiate (ingredient_2, array [randNum].transform.position, Quaternion.identity) as GameObject;
@@ -90,6 +113,9 @@ public class spawnScript : MonoBehaviour {
 		}
 	}
 	public void spawnIngredient3(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (ingredient_3) {
 			GameObject newIngredient =Instantiate (ingredient_3, array [randNum].transform.position, Quaternion.identity) as GameObject;
@@ -97,6 +123,9 @@ public class spawnScript : MonoBehaviour {
 		}
 	}
 	public void spawnIngredient4(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (ingredient_4) {
 			GameObject newIngredient =Instantiate (ingredient_4, array [randNum].transform.position, Quaternion.identity) as GameObject;
@@ -104,6 +133,9 @@ public class spawnScript : MonoBehaviour {
 		}
 	}
 	public void spawnIngredient5(){
+		//playsound
+		source.PlayOneShot(jellyKidSound,vol);
+
 		int randNum=Random.Range (0, 3);
 		if (ingredient_5) {
 			GameObject newIngredient =Instantiate (ingredient_5, array [randNum].transform.position, Quaternion.identity) as GameObject;

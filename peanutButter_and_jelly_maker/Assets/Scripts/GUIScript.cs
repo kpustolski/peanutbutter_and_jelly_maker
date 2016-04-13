@@ -3,6 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 public class GUIScript : MonoBehaviour {
 
+	//audio
+	public AudioClip tadaSound;
+	private AudioSource source;
+	public float vol;
+
 	//buttons
 	public Button breadBtn;
 	public Button jellyBtn;
@@ -42,9 +47,14 @@ public class GUIScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//get audio source
+		source = GetComponent<AudioSource>();
+
 		//initialize locations
 		// hiddenLocation will hide the buttons from the screen
 		hiddenLocation = new Vector3 (383f,-200f,0f);
+
 		// showLocation will make the buttons appear
 		centerLocation = new Vector3 (Screen.width/2,Screen.height/7,0f);
 		otherLocation = new Vector3 (Screen.width/2,Screen.height/7,0f);
@@ -147,6 +157,8 @@ public class GUIScript : MonoBehaviour {
 			nextBtn.enabled = false;
 			nextBtn.transform.position= hiddenLocation;
 			rotateTable = true;
+			//play tada! sound
+			source.PlayOneShot(tadaSound,vol);
 
 			//enable and show the reply button.
 			makeAnotherBtn.enabled = true;

@@ -46,7 +46,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DestroySelfScript.cs" />
+     <Compile Include="Assets\Scripts\FlattenScript.cs" />
      <Compile Include="Assets\Scripts\GUIScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScript.cs" />
+     <Compile Include="Assets\Scripts\RotateCamera.cs" />
      <Compile Include="Assets\Scripts\ballDropScript.cs" />
      <Compile Include="Assets\Scripts\spawnScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
